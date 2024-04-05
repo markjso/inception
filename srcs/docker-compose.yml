@@ -47,12 +47,12 @@ volumes:
   mariadb-data:
     driver: local
     driver_opts:
-      type: 'none'
-      o: 'bind'
+      type: none
+      o: bind
       device: /home/jmarks/data/mariadb-data
   wordpress-data:
     driver: local
     driver_opts:
-      type: 'none'
-      o: 'bind'
+      type: none
+      o: bind
       device: /home/jmarks/data/wordpress-data

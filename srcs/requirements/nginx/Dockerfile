@@ -4,8 +4,7 @@ FROM	alpine:3.17
 RUN		apk update && apk upgrade &&\
 		apk add nginx &&\
 		mkdir -p /var/www/html/
-COPY	./conf/nginx.conf /etc/nginx/nginx.conf
-COPY	./conf/default.conf /etc/nginx/http.d/default.conf
+COPY	./conf/nginx.conf /etc/nginx/http.d/nginx.conf
 
 # OPENSSL
 RUN		apk add openssl &&\
@@ -18,9 +17,6 @@ RUN		adduser -D -g 'www' www &&\
 		chown -R www:www /run/nginx/ &&\
 		chown -R www:www /var/www/html/
 
-EXPOSE	443/tcp
+EXPOSE	443
 
-# Run nginx with daemon off, i.e. in the foreground since one container only
-# has one service. This is best practice for Docker containers and/or debugging.
-ENTRYPOINT	["nginx"]
-CMD			["-g", "daemon off;"]
+CMD			["nginx", "-g", "daemon off;"]

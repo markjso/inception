@@ -17,7 +17,7 @@ clean:	down
 	@sudo rm -rf ~/data/wordpress-data/*
 	@sudo rm -rf ~/data/mariadb-data/*
 
-fclean: 
+fclean: down
 	@docker system prune -f -a --volumes
 	@docker volume rm srcs_mariadb-data srcs_wordpress-data
 	@sudo rm -rf ~/data/wordpress-data/*
