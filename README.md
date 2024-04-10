@@ -1,7 +1,8 @@
 <h2>Inception</h2>
 A project that aims to broaden your knowledge of sys admin by using Docker.
 <h3>Steps</h3>
-After a lot(and I mean a lot!) of trial and error these are the steps I took to complete the project.
+After a lot(and I mean a lot!) of trial and error these are the steps I took to complete the project.  
+
 1. Set up virtual machine using latest Debian image (12.5 at time of writing)
 2. Install required software - apt udpate
                              - apt install -y sudo, ufw, docker, docker-compose, make, openbox, xinit, kitty, firefox-esr
@@ -31,10 +32,14 @@ After a lot(and I mean a lot!) of trial and error these are the steps I took to 
 13. Create Makefile with docker-compose commands to build, up, down, fclean etc
 
 <h3>Useful commands</h3>
-docker-compose up -d - start container
-docker-compose down - stop container
-docker-compose up -d --build - build the container
-docker ps -a - shows the list of running containers
+docker-compose up -d - start container  
+
+docker-compose down - stop container  
+
+docker-compose up -d --build - build the container  
+
+docker ps -a - shows the list of running containers  
+
 docker-compose down --volumes - stops the container and removes the volumes
 docker exec -it wordpress ps aux | grep 'php' - shows that wordpress and php have been installed
 docker exec -it mariadb mysql -u user -ppwd - log into the mariadb
