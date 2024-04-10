@@ -1,1 +1,17 @@
+DOMAIN=login.42.fr
 
+DB_HOST=mariadb
+DB_ROOT_PASS=
+
+WP_DB_NAME=wordpress_db
+WP_DB_USER=
+WP_DB_PASS=
+
+WP_PATH=/var/www/html
+WP_TITLE=Inception
+WP_ADMIN_USER=
+WP_ADMIN_PASS=
+WP_ADMIN_EMAIL=
+WP_USER=
+WP_USER_PASS=
+WP_USER_EMAIL=
