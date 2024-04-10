@@ -21,9 +21,9 @@ After a lot(and I mean a lot!) of trial and error these are the steps I took to 
 5. Make directories and files for the project using the subject pdf structure
 7. Modify /etc/hosts so that 127.0.0.1 points to user.42.fr
 8. Create nginx container. There is lots of documentation on the internet about this.<br>
-9.                        - image is the Dockerfile. Needs to contain the run commands for both nginx and openssl. We use openssl to generate a self-signed certificate in TLSv1.3<br>
-                          - configuration goes in conf/nginx.conf<br>
-                          - google what is required for an openssl certificate, there is a format to follow
+                 - image is the Dockerfile. Needs to contain the run commands for both nginx and openssl. We use openssl to generate a self-signed certificate in TLSv1.3<br>
+                 - configuration goes in conf/nginx.conf<br>
+                 - google what is required for an openssl certificate, there is a format to follow
 10. Create worpress container. In the .env file that you would have created enter login details required for wordpress (there is an example included in my github).<br>
                 - the Dockerfile needs to include the installalation of php-fpm and its dependicies<br>
                 - in the /conf folder you will need a bash script to configure wordpress (I used wp-cli for this)<br>
