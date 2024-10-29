@@ -1,6 +1,6 @@
-<h2>Inception</h2>
+## Inception
 A project that aims to broaden your knowledge of sys admin by using Docker.
-<h3>Steps</h3>
+### Steps
 After a lot(and I mean a lot!) of trial and error these are the steps I took to complete the project.  
 
 1. Set up virtual machine using latest Debian image (12.5 at time of writing)
@@ -31,7 +31,7 @@ After a lot(and I mean a lot!) of trial and error these are the steps I took to 
 12. Create mariadb container - in the /conf folder you will need a bash script to configure the mysql database and store the login details in the .env file
 13. Create Makefile with docker-compose commands to build, up, down, fclean etc
 
-<h3>Useful commands</h3>
+### Useful commands
 docker-compose up -d - start container<br>
 docker-compose down - stop container<br>
 docker-compose up -d --build - build the container<br>  
@@ -39,4 +39,4 @@ docker ps -a - shows the list of running containers<br>
 docker-compose down --volumes - stops the container and removes the volumes<br>
 docker exec -it wordpress ps aux | grep 'php' - shows that wordpress and php have been installed<br>
 docker exec -it mariadb mysql -u user -ppwd - log into the mariadb<br>
-SHOW DATABASES; - when in the mariadb will show a list of databases installed. Use this to check that a wordpress db exists
+SHOW DATABASES - when in the mariadb will show a list of databases installed. Use this to check that a wordpress db exists.
